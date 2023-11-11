@@ -1,6 +1,6 @@
 ﻿namespace Capstone.Pages.Data_Classes
 {
-    public class Events
+    public class Event
     {
         public int EventID { get; set; }
         public string? EventName{ get; set; }

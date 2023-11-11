@@ -1,3 +1,4 @@
+using Capstone.Pages.Data_Classes;
 using Capstone.Pages.DB;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -6,28 +7,31 @@ using System.Data.SqlClient;
 
 namespace Capstone.Pages.Events
 {
-    public class CreateEventModel : PageModel
+    namespace Capstone.Pages.Events
     {
-        private readonly DBClass _dbClass;
-
-        [BindProperty]
-        public Events NewEvent { get; set; }
-
-        public CreateEventModel(DBClass dbClass)
+        public class CreateEventModel : PageModel
         {
-            _dbClass = dbClass;
-        }
+            private readonly DBClass _dbClass;
 
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid)
+            [BindProperty]
+            public Event NewEvent { get; set; }
+
+            public CreateEventModel(DBClass dbClass)
             {
-                return Page();
+                _dbClass = dbClass;
             }
 
-            _dbClass.InsertEvent(NewEvent);
+            public IActionResult OnPost()
+            {
+                if (!ModelState.IsValid)
+                {
+                    return Page();
+                }
 
-            return RedirectToPage("/Events/EventApproval");
+                _dbClass.InsertEvent(NewEvent);
+
+                return RedirectToPage("/Events/EventApproval");
+            }
         }
     }
 }

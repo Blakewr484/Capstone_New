@@ -11,39 +11,39 @@
 
 <form method="post">
     <div class="form-group">
-        <label asp-for="Event.Name" class="control-label"></label>
-        <input asp-for="Event.Name" class="form-control" />
-        <span asp-validation-for="Event.Name" class="text-danger"></span>
+        <label asp-for="NewEvent.EventName" class="control-label"></label>
+        <input asp-for="NewEvent.EventName" class="form-control" />
+        <span asp-validation-for="NewEvent.EventName" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Event.Date" class="control-label"></label>
-        <input asp-for="Event.Date" class="form-control" type="date" />
-        <span asp-validation-for="Event.Date" class="text-danger"></span>
+        <label asp-for="NewEvent.StartDate" class="control-label"></label>
+        <input asp-for="NewEvent.StartDate" class="form-control" type="date" />
+        <span asp-validation-for="NewEvent.StartDate" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Event.Time" class="control-label"></label>
-        <input asp-for="Event.Time" class="form-control" type="time" />
-        <span asp-validation-for="Event.Time" class="text-danger"></span>
+        <label asp-for="NewEvent.EndDate" class="control-label"></label>
+        <input asp-for="NewEvent.EndDate" class="form-control" type="time" />
+        <span asp-validation-for="NewEvent.EndDate" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Event.Description" class="control-label"></label>
-        <textarea asp-for="Event.Description" class="form-control"></textarea>
-        <span asp-validation-for="Event.Description" class="text-danger"></span>
+        <label asp-for="NewEvent.Description" class="control-label"></label>
+        <textarea asp-for="NewEvent.Description" class="form-control"></textarea>
+        <span asp-validation-for="NewEvent.Description" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Event.Location" class="control-label"></label>
-        <input asp-for="Event.Location" class="form-control" />
-        <span asp-validation-for="Event.Location" class="text-danger"></span>
+        <label asp-for="NewEvent.Address" class="control-label"></label>
+        <input asp-for="NewEvent.Address" class="form-control" />
+        <span asp-validation-for="NewEvent.Address" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Event.RegistrationFee" class="control-label"></label>
-        <input asp-for="Event.RegistrationFee" class="form-control" />
-        <span asp-validation-for="Event.RegistrationFee" class="text-danger"></span>
+        <label asp-for="NewEvent.RegistrationCost" class="control-label"></label>
+        <input asp-for="NewEvent.RegistrationCost" class="form-control" />
+        <span asp-validation-for="NewEvent.RegistrationCost" class="text-danger"></span>
     </div>
 
     <div class="form-group">
