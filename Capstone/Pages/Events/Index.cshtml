@@ -1,0 +1,59 @@
+﻿@page
+@model Capstone.Pages.Events.IndexModel
+@{
+}
+@{
+    ViewData["Title"] = "Events";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="float-left">Events</h1>
+            <a href="/Events/CreateEvent" class="btn btn-primary float-right">Create Event</a>
+        </div>
+    </div>
+</div>
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="/Index">Home Page</a>
+                    <span data-feather="home"></span>
+                    
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Events/Index">Events</a>
+                <span data-feather="file"></span>
+
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Calendar/Index">Calendar</a>
+
+                <span data-feather="shopping-cart"></span>
+
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/MySchedule/Index">My Schedule</a>
+                <span data-feather="users"></span>
+
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Profile/Index">Profile</a>
+                <span data-feather="bar-chart-2"></span>
+
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Settings/Index">Settings</a>
+                <span data-feather="layers"></span>
+
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

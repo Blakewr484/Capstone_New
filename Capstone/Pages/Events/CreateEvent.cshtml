@@ -1,0 +1,56 @@
+﻿@page
+@model Capstone.Pages.Events.CreateEventModel
+@{
+}
+
+@{
+    ViewData["Title"] = "New Event";
+}
+
+<h2>New Event</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Event.Name" class="control-label"></label>
+        <input asp-for="Event.Name" class="form-control" />
+        <span asp-validation-for="Event.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Event.Date" class="control-label"></label>
+        <input asp-for="Event.Date" class="form-control" type="date" />
+        <span asp-validation-for="Event.Date" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Event.Time" class="control-label"></label>
+        <input asp-for="Event.Time" class="form-control" type="time" />
+        <span asp-validation-for="Event.Time" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Event.Description" class="control-label"></label>
+        <textarea asp-for="Event.Description" class="form-control"></textarea>
+        <span asp-validation-for="Event.Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Event.Location" class="control-label"></label>
+        <input asp-for="Event.Location" class="form-control" />
+        <span asp-validation-for="Event.Location" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Event.RegistrationFee" class="control-label"></label>
+        <input asp-for="Event.RegistrationFee" class="form-control" />
+        <span asp-validation-for="Event.RegistrationFee" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
